@@ -23,12 +23,12 @@ public class MyLogger {
 
     @PostConstruct
     public void init() {
-        String uuid = UUID.randomUUID().toString();
-        System.out.printf("[%s] request scope bean create: %s", uuid, this.toString());
+        uuid = UUID.randomUUID().toString();
+        System.out.printf("[%s] request scope bean create: %s\n", uuid, this.toString());
     }
 
     @PreDestroy
     public void close() {
-        System.out.printf("[%s] request scope bean close: %s", uuid, this.toString());
+        System.out.printf("[%s] request scope bean close: %s\n", uuid, this.toString());
     }
 }
